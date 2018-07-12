@@ -44,4 +44,11 @@ public class CodePencilTests {
         myPencil = new CodePencil();
         assertEquals(500, myPencil.getPointDegredation());
     }
+
+    @Test
+    public void PointDegredationWorksForlowercase(){
+        myPencil = new CodePencil();
+        myPencil.write("apple");
+        assertEquals(495, myPencil.getPointDegredation());
+    }
 }

@@ -21,6 +21,7 @@ public class CodePencil {
 
     public void write(String whatToWrite) {
 
+        pointDegredation -= whatToWrite.length();
         paper += whatToWrite;
     }
 
