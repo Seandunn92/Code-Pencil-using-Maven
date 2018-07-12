@@ -16,4 +16,14 @@ public class CodePencilTests {
 
     }
 
+    @Test
+    public void SettingPaperWorks(){
+        String desiredPaper= "It's a new paper";
+        myPencil.setPaper(desiredPaper);
+        assertEquals(desiredPaper, myPencil.getPaper());
+
+    }
+
+
+
 }

@@ -13,4 +13,7 @@ public class CodePencil {
     }
 
 
+    public void setPaper(String desiredPaper) {
+        paper=desiredPaper;
+    }
 }
