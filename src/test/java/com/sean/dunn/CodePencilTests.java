@@ -33,5 +33,10 @@ public class CodePencilTests {
     }
 
 
+    public void WritingOnNonBlankPageWorks(){
+        myPencil.setPaper("He couldn't have");
+        myPencil.write(" jumped across the river.");
+        assertEquals("He coulnd't have jumped across the river.", myPencil.getPaper());
+    }
 
 }
