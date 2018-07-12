@@ -32,11 +32,12 @@ public class CodePencilTests {
         assertEquals("Hi Sean", myPencil.getPaper());
     }
 
-
+    @Test
     public void WritingOnNonBlankPageWorks(){
         myPencil.setPaper("He couldn't have");
         myPencil.write(" jumped across the river.");
-        assertEquals("He coulnd't have jumped across the river.", myPencil.getPaper());
+        assertEquals("He couldn't have jumped across the river.", myPencil.getPaper());
     }
+
 
 }
