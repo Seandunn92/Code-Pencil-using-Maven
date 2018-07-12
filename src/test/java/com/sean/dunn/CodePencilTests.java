@@ -39,5 +39,9 @@ public class CodePencilTests {
         assertEquals("He couldn't have jumped across the river.", myPencil.getPaper());
     }
 
-
+    @Test
+    public void PointDegredationIsSetTo500ByDefault(){
+        myPencil = new CodePencil();
+        assertEquals(500, myPencil.getPointDegredation());
+    }
 }
