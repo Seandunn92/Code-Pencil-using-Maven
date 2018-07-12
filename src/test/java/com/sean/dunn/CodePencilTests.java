@@ -24,6 +24,14 @@ public class CodePencilTests {
 
     }
 
+    @Test
+    public void WritingOnABlankPageWorks(){
+
+        myPencil.setPaper("");
+        myPencil.write("Hi Sean");
+        assertEquals("Hi Sean", myPencil.getPaper());
+    }
+
 
 
 }

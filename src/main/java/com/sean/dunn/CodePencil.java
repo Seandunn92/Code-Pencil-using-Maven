@@ -16,4 +16,11 @@ public class CodePencil {
     public void setPaper(String desiredPaper) {
         paper=desiredPaper;
     }
+
+
+    public void write(String whatToWrite) {
+
+        paper += whatToWrite;
+    }
+
 }
