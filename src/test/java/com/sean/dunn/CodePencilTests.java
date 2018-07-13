@@ -93,13 +93,14 @@ public class CodePencilTests {
     }
 
 
-//    @Test
-//    public void PencilStopsWritingWhenDurabilityisZero(){
-//        myPencil = new CodePencil();
-//        myPencil.setPointDurabilityLeft(7);
-//        myPencil.write("apples and pears");
-//        assertEquals("apples a" , myPencil.getPaper());
-//    }
+    @Test
+    public void PencilStopsWritingWhenDurabilityisZero(){
+        myPencil = new CodePencil();
+        myPencil.setPointDurabilityLeft(7);
+        myPencil.write("apples and pears");
+        //8 spaces after apple a
+        assertEquals("apples a        "   , myPencil.getPaper());
+    }
 
 
 
