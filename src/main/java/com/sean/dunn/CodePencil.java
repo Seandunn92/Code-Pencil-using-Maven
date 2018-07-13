@@ -113,5 +113,7 @@ public class CodePencil {
         String paperAfterDeletion = paper.substring(endOfDeletion);
         String paperBeforeDeletion = paper.substring(0, beginningOfDeletion);
         paper = paperBeforeDeletion + calculateStringOfSpaces(deletionTarget.length()) + paperAfterDeletion;
+
+        eraserDurability-= deletionTarget.length();
     }
 }

@@ -150,22 +150,29 @@ public class CodePencilTests {
     }
 
     @Test
-    public void ErasingWorksWhenDurabilityIsNotAConcern(){
-        myPencil.setEraserDurability(6000);
+    public void ErasingWorks(){
+        myPencil.setEraserDurability(600);
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("Apples");
         assertEquals(numSpaces(6) + " and Bananas", myPencil.getPaper());
+        assertEquals( 594, myPencil.getEraserDurability());
 
 
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("Bananas");
         assertEquals("Apples and " + numSpaces(7), myPencil.getPaper());
-
+        assertEquals(587, myPencil.getEraserDurability());
 
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("and");
         assertEquals("Apples " + numSpaces(3)+ " Bananas", myPencil.getPaper());
+        assertEquals(584, myPencil.getEraserDurability());
+
     }
+
+
+
+
 
 
 
