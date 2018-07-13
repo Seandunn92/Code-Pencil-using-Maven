@@ -3,11 +3,11 @@ package com.sean.dunn;
 public class CodePencil {
 
     private String paper;
-    int pointDegredation;
+    int pointDurability;
 
     public CodePencil(){
         paper = "";
-        pointDegredation = 500;
+        pointDurability = 500;
     }
 
     public String getPaper(){
@@ -22,25 +22,26 @@ public class CodePencil {
     public void write(String whatToWrite) {
 
 
-        pointDegredation -= calculatePointDegredation(whatToWrite);
+        pointDurability -= calculatePointDegredation(whatToWrite);
         paper += whatToWrite;
     }
 
     private int calculatePointDegredation(String whatToWrite) {
-        int count =0;
+        int pointDegradation =0;
         for (int i = 0; i<whatToWrite.length(); i++)
         {
             char currentChar = whatToWrite.charAt(i);
            if(Character.toLowerCase(currentChar) == currentChar){
-                count++;
+                pointDegradation++;
            }
+           else pointDegradation +=2;
         }
-        return count;
+        return pointDegradation;
     }
 
 
-    public int getPointDegredation() {
-        return pointDegredation;
+    public int getPointDurability() {
+        return pointDurability;
     }
 
 

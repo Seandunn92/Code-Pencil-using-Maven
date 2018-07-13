@@ -42,20 +42,21 @@ public class CodePencilTests {
     @Test
     public void PointDegredationIsSetTo500ByDefault(){
         myPencil = new CodePencil();
-        assertEquals(500, myPencil.getPointDegredation());
+        assertEquals(500, myPencil.getPointDurability());
     }
 
     @Test
     public void PointDegredationWorksForlowercase(){
         myPencil = new CodePencil();
         myPencil.write("apple");
-        assertEquals(495, myPencil.getPointDegredation());
+        assertEquals(495, myPencil.getPointDurability());
     }
 
-//    @Test
-//    public void PointDegredationWorksForUppercase(){
-//        myPencil = new CodePencil();
-//        myPencil.write("Apple");
-//        assertEquals(494, myPencil.getPointDegredation());
-//    }
+    @Test
+    public void PointDegredationWorksForUppercase(){
+        myPencil = new CodePencil();
+        myPencil.write("Apple");
+        assertEquals(494, myPencil.getPointDurability());
+    }
+
 }
