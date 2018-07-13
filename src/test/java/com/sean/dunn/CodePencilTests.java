@@ -165,6 +165,15 @@ public class CodePencilTests {
         assertEquals("Apples and " + numSpaces(7), myPencil.getPaper());
     }
 
+    @Test
+    public void ErasingTheMiddleWordWorks(){
+        myPencil = new CodePencil();
+        myPencil.setPaper("Apples and Bananas");
+        myPencil.erase("and");
+        assertEquals("Apples " + numSpaces(3)+ " Bananas", myPencil.getPaper());
+    }
+
+
     public String numSpaces(int numberOfSpaces){
         String stringOfSpaces="";
         for (int i =0; i<numberOfSpaces; i++)
@@ -172,4 +181,8 @@ public class CodePencilTests {
 
         return stringOfSpaces;
     }
+
+
+
 }
+
