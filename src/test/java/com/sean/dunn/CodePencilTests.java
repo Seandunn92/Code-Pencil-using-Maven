@@ -26,7 +26,6 @@ public class CodePencilTests {
 
     @Test
     public void WritingOnABlankPageWorks(){
-
         myPencil.setPaper("");
         myPencil.write("Hi Sean");
         assertEquals("Hi Sean", myPencil.getPaper());
@@ -114,5 +113,19 @@ public class CodePencilTests {
         assertEquals(4, myPencil.getPencilLength());
 
     }
+    @Test
+    public void SharpenRestoresDurabilityLeft(){
+        myPencil = new CodePencil(400, 5);
+        myPencil.setPointDurabilityLeft(50);
+        myPencil.sharpen();
+        assertEquals(400, myPencil.getPointDurabilityLeft());
+    }
 
+    @Test
+    public void SharpenDecreasesPencilLength(){
+        myPencil.setPencilLength(5);
+        myPencil.sharpen();
+        assertEquals(4, myPencil.getPencilLength());
+
+    }
 }
