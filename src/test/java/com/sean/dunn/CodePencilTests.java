@@ -83,5 +83,13 @@ public class CodePencilTests {
         assertEquals(491, myPencil.getPointDurability());
 
     }
+    @Test
+    public void PointDegredationWorksForNewLines(){
+        myPencil.setPointDurablity(10);
+        myPencil.write("\n\n\n\n");
+        assertEquals(10, myPencil.getPointDurability());
+        myPencil.write("hello \n there");
+        assertEquals(0, myPencil.getPointDurability());
+    }
 
 }

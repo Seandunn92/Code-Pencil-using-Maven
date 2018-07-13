@@ -45,7 +45,7 @@ public class CodePencil {
         {
 
             char currentChar = whatToWrite.charAt(i);
-            if (currentChar != ' ') {
+            if (currentChar != ' '  && currentChar !='\n') {
                 if (Character.toLowerCase(currentChar) == currentChar) {
                     pointDegradation++;
                 } else pointDegradation += 2;
