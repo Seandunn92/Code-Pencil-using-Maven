@@ -57,6 +57,8 @@ public class CodePencilTests {
         myPencil = new CodePencil();
         myPencil.write("Apple");
         assertEquals(494, myPencil.getPointDurability());
+        myPencil.write("PEAR");
+        assertEquals(486, myPencil.getPointDurability());
     }
 
 }
