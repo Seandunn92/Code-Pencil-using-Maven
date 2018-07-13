@@ -128,4 +128,12 @@ public class CodePencilTests {
         assertEquals(4, myPencil.getPencilLength());
 
     }
+
+    @Test
+    public void SharpenWillNotSharpenIfPencilLengthIsZero(){
+        myPencil = new CodePencil(350, 0);
+        myPencil.setPointDurabilityLeft(100);
+        myPencil.sharpen();
+        assertEquals(100, myPencil.getPointDurabilityLeft());
+    }
 }

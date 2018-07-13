@@ -90,7 +90,9 @@ public class CodePencil {
 
 
     public void sharpen() {
-        pointDurabilityLeft=pointDurability;
-        pencilLength--;
+        if (pencilLength>0) {
+            pointDurabilityLeft = pointDurability;
+            pencilLength--;
+        }
     }
 }
