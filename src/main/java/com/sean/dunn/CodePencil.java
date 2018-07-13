@@ -51,4 +51,7 @@ public class CodePencil {
     }
 
 
+    public void setPointDurablity(int pointDurability) {
+        this.pointDurability=pointDurability;
+    }
 }
