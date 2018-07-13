@@ -14,9 +14,10 @@ public class CodePencil {
         pencilLength =10;
     }
 
-    public CodePencil(int pointDurability) {
+    public CodePencil(int pointDurability, int pencilLength) {
         this.pointDurability = pointDurability;
         this.pointDurabilityLeft = pointDurability;
+        this.pencilLength=pencilLength;
     }
 
     public void setPaper(String desiredPaper) {

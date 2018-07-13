@@ -45,9 +45,10 @@ public class CodePencilTests {
         assertEquals(500, myPencil.getPointDurabilityLeft());
     }
     @Test
-    public void PointDurabilityCanBeSetByConstructor(){
-        myPencil = new CodePencil(10);
+    public void NonDefaultConstructorWorks(){
+        myPencil = new CodePencil(10,7);
         assertEquals(10, myPencil.getPointDurabilityLeft());
+        assertEquals(7, myPencil.getPencilLength());
     }
 
     @Test
