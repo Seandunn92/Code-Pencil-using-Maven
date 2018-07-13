@@ -50,6 +50,8 @@ public class CodePencilTests {
         myPencil = new CodePencil();
         myPencil.write("apple");
         assertEquals(495, myPencil.getPointDurability());
+        myPencil.write("pear");
+        assertEquals(491, myPencil.getPointDurability());
     }
 
     @Test
@@ -59,6 +61,16 @@ public class CodePencilTests {
         assertEquals(494, myPencil.getPointDurability());
         myPencil.write("PEAR");
         assertEquals(486, myPencil.getPointDurability());
+    }
+
+    @Test
+    public void PointDegredationWorksForSpaces(){
+        myPencil = new CodePencil();
+        myPencil.write("apple pear");
+        assertEquals(491, myPencil.getPointDurability());
+        myPencil.write("   ");
+        assertEquals(491, myPencil.getPointDurability());
+
     }
 
 }

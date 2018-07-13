@@ -30,11 +30,13 @@ public class CodePencil {
         int pointDegradation =0;
         for (int i = 0; i<whatToWrite.length(); i++)
         {
+
             char currentChar = whatToWrite.charAt(i);
-           if(Character.toLowerCase(currentChar) == currentChar){
-                pointDegradation++;
-           }
-           else pointDegradation +=2;
+            if (currentChar != ' ') {
+                if (Character.toLowerCase(currentChar) == currentChar) {
+                    pointDegradation++;
+                } else pointDegradation += 2;
+            }
         }
         return pointDegradation;
     }
