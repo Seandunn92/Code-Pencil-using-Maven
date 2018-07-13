@@ -150,28 +150,23 @@ public class CodePencilTests {
     }
 
     @Test
-    public void ErasingTheFirstWordWorks(){
-        myPencil.setEraserDurability(60);
+    public void ErasingWorksWhenDurabilityIsNotAConcern(){
+        myPencil.setEraserDurability(6000);
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("Apples");
         assertEquals(numSpaces(6) + " and Bananas", myPencil.getPaper());
-    }
 
-    @Test
-    public void ErasingTheLastWordWorks(){
-        myPencil = new CodePencil();
+
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("Bananas");
         assertEquals("Apples and " + numSpaces(7), myPencil.getPaper());
-    }
 
-    @Test
-    public void ErasingTheMiddleWordWorks(){
-        myPencil = new CodePencil();
+
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("and");
         assertEquals("Apples " + numSpaces(3)+ " Bananas", myPencil.getPaper());
     }
+
 
 
     public String numSpaces(int numberOfSpaces){
@@ -181,6 +176,8 @@ public class CodePencilTests {
 
         return stringOfSpaces;
     }
+
+
 
 
 
