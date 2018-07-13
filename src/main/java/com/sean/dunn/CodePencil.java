@@ -10,6 +10,10 @@ public class CodePencil {
         pointDurability = 500;
     }
 
+    public CodePencil(int pointDurability) {
+        this.pointDurability = pointDurability;
+    }
+
     public String getPaper(){
         return paper;
     }

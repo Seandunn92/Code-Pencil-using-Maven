@@ -44,6 +44,11 @@ public class CodePencilTests {
         myPencil = new CodePencil();
         assertEquals(500, myPencil.getPointDurability());
     }
+    @Test
+    public void PointDurabilityCanBeSetByConstructor(){
+        myPencil = new CodePencil(10);
+        assertEquals(10, myPencil.getPointDurability());
+    }
 
     @Test
     public void PointDegredationWorksForlowercase(){
