@@ -149,4 +149,21 @@ public class CodePencilTests {
         myPencil.setEraserDurability(47);
         assertEquals(47, myPencil.getEraserDurability());
     }
+
+    @Test
+    public void ErasingTheFirstWordWorks(){
+        myPencil.setEraserDurability(60);
+        myPencil.setPaper("Apples and Bananas");
+        myPencil.erase("Apples");
+        assertEquals("       and Bananas", myPencil.getPaper());
+    }
+
+    @Test
+    public void ErasingTheLastWordWorks(){
+        myPencil = new CodePencil();
+        myPencil.setPaper("Apples and Bananas");
+        myPencil.erase("Bananas");
+        assertEquals("Apples and        ", myPencil.getPaper());
+    }
+
 }

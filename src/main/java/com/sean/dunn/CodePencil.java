@@ -107,5 +107,11 @@ public class CodePencil {
     }
 
 
-
+    public void erase(String deletionTarget) {
+        int beginningOfDeletion = paper.lastIndexOf(deletionTarget);
+        int endOfDeletion = paper.lastIndexOf(deletionTarget) + deletionTarget.length();
+        String paperAfterDeletion = paper.substring(endOfDeletion);
+        String paperBeforeDeletion = paper.substring(0, beginningOfDeletion);
+        paper = paperBeforeDeletion + calculateStringOfSpaces(deletionTarget.length()) + paperAfterDeletion;
+    }
 }
