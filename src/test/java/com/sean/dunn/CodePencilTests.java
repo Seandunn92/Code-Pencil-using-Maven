@@ -204,6 +204,16 @@ public class CodePencilTests {
         assertEquals(0, myPencil.getEraserDurability());
     }
 
+    @Test
+    public void DegredationinMiddleofErasingStopsDeletion(){
+        myPencil.setEraserDurability(2);
+        myPencil.setPaper("Cargo Shorts");
+        myPencil.erase("Cargo");
+        assertEquals("  rgo Shorts", myPencil.getPaper());
+        assertEquals(0, myPencil.getEraserDurability());
+
+    }
+
 
     public String numSpaces(int numberOfSpaces){
         String stringOfSpaces="";
