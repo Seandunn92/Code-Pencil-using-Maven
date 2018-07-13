@@ -22,6 +22,15 @@ public class CodePencil {
         paper=desiredPaper;
     }
 
+    public int getPointDurability() {
+        return pointDurability;
+    }
+
+
+    public void setPointDurablity(int pointDurability) {
+        this.pointDurability=pointDurability;
+    }
+
 
     public void write(String whatToWrite) {
 
@@ -45,13 +54,4 @@ public class CodePencil {
         return pointDegradation;
     }
 
-
-    public int getPointDurability() {
-        return pointDurability;
-    }
-
-
-    public void setPointDurablity(int pointDurability) {
-        this.pointDurability=pointDurability;
-    }
 }
