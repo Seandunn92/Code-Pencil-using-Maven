@@ -45,9 +45,10 @@ public class CodePencilTests {
     }
     @Test
     public void NonDefaultConstructorWorks(){
-        myPencil = new CodePencil(10,7);
+        myPencil = new CodePencil(10,7, 57);
         assertEquals(10, myPencil.getPointDurability());
         assertEquals(7, myPencil.getPencilLength());
+        assertEquals(57, myPencil.getEraserDurability());
     }
 
     @Test
@@ -115,7 +116,7 @@ public class CodePencilTests {
     }
     @Test
     public void SharpenRestoresDurabilityLeft(){
-        myPencil = new CodePencil(400, 5);
+        myPencil = new CodePencil(400, 5, 50);
         myPencil.setPointDurability(50);
         myPencil.sharpen();
         assertEquals(400, myPencil.getPointDurability());
@@ -131,7 +132,7 @@ public class CodePencilTests {
 
     @Test
     public void SharpenWillNotSharpenIfPencilLengthIsZero(){
-        myPencil = new CodePencil(350, 0);
+        myPencil = new CodePencil(350, 0, 50);
         myPencil.setPointDurability(100);
         myPencil.sharpen();
         assertEquals(100, myPencil.getPointDurability());

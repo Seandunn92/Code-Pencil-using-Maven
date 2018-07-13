@@ -16,10 +16,11 @@ public class CodePencil {
         eraserDurability=100;
     }
 
-    public CodePencil(int pointDurability, int pencilLength) {
+    public CodePencil(int pointDurability, int pencilLength, int eraserDurability) {
         this.initialPointDurability = pointDurability;
         this.pointDurability = pointDurability;
         this.pencilLength=pencilLength;
+        this.eraserDurability = eraserDurability;
     }
 
     public void setPaper(String desiredPaper) {
