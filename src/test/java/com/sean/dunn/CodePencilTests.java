@@ -102,6 +102,10 @@ public class CodePencilTests {
         assertEquals("apples a        "   , myPencil.getPaper());
     }
 
-
+    @Test
+    public void pencilLengthIsSetToTenByDefault(){
+        myPencil= new CodePencil();
+        assertEquals(10, myPencil.getPencilLength());
+    }
 
 }

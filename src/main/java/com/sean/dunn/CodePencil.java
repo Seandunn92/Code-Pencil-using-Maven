@@ -3,13 +3,15 @@ package com.sean.dunn;
 public class CodePencil {
 
     private String paper;
-    int pointDurability;
-    int pointDurabilityLeft;
+    private int pointDurability;
+    private int pointDurabilityLeft;
+    private int pencilLength;
 
     public CodePencil(){
         paper = "";
         pointDurability = 500;
         pointDurabilityLeft=500;
+        pencilLength =10;
     }
 
     public CodePencil(int pointDurability) {
@@ -39,6 +41,9 @@ public class CodePencil {
 
     public int getPointDurabilityLeft() {
         return pointDurabilityLeft;
+    }
+    public int getPencilLength() {
+        return pencilLength;
     }
 
     public void write(String whatToWrite) {
@@ -76,6 +81,7 @@ public class CodePencil {
         }
         return whatToWrite.length();
     }
+
 
 
 }
