@@ -145,6 +145,7 @@ public class CodePencil {
                 }
                 if (insertion != paper.charAt(i)) {
                     paper = paper.substring(0, i) + insertion + paper.substring(i + 1);
+                    if (insertion!='@')
                     pointDurability--;
                 }
 

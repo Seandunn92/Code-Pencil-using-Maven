@@ -234,7 +234,7 @@ public class CodePencilTests {
         myPencil.setPaper("An "+ numSpaces(5) + " a day keeps the doctor away");
         myPencil.edit(3, "artichoke");
         assertEquals("An artich@k@ay keeps the doctor away", myPencil.getPaper());
-        //assertEquals(94, myPencil.getPointDurability());
+        assertEquals(93, myPencil.getPointDurability());
 
 
     }
