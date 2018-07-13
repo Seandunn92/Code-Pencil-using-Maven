@@ -178,7 +178,22 @@ public class CodePencilTests {
         assertEquals(600, myPencil.getEraserDurability());
     }
 
+    @Test
+    public void ErasingRemovestheLastWord(){
+        myPencil.setEraserDurability(600);
+        myPencil.setPaper("Apples and Bananas and Apples again");
+        myPencil.erase("Apples");
+        assertEquals("Apples and Bananas and " + numSpaces(6)+ " again", myPencil.getPaper());
+    }
 
+    @Test
+    public void ErasingStringNotInPaperDoesNotDegradeOrErase(){
+        myPencil.setEraserDurability(560);
+        myPencil.setPaper("Apple and Bananas");
+        myPencil.erase("Apples");
+        assertEquals("Apple and Bananas", myPencil.getPaper());
+        assertEquals(560, myPencil.getEraserDurability());
+    }
 
 
     public String numSpaces(int numberOfSpaces){

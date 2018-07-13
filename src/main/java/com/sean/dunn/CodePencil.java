@@ -109,6 +109,9 @@ public class CodePencil {
 
     public void erase(String deletionTarget) {
         int beginningOfDeletion = paper.lastIndexOf(deletionTarget);
+        if (beginningOfDeletion<0)
+            return;
+
         int endOfDeletion = paper.lastIndexOf(deletionTarget) + deletionTarget.length();
         String paperAfterDeletion = paper.substring(endOfDeletion);
         String paperBeforeDeletion = paper.substring(0, beginningOfDeletion);
