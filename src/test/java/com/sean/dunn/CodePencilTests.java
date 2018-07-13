@@ -209,8 +209,12 @@ public class CodePencilTests {
         myPencil.setEraserDurability(2);
         myPencil.setPaper("Cargo Shorts");
         myPencil.erase("Cargo");
-        assertEquals("  rgo Shorts", myPencil.getPaper());
+        assertEquals("Car   Shorts", myPencil.getPaper());
         assertEquals(0, myPencil.getEraserDurability());
+
+        myPencil.setPaper("Buffalo Bill");
+        myPencil.setEraserDurability(3);
+        myPencil.erase("Buffalo B   ");
 
     }
 

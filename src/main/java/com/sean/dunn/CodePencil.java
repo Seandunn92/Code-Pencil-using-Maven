@@ -82,7 +82,7 @@ public class CodePencil {
     }
 
     private String performDelete(String deletionTarget){
-        for (int i=0; i<deletionTarget.length(); i++){
+        for (int i=deletionTarget.length()-1; i>=0; i--){
             if (eraserDurability==0)
                 return deletionTarget;
             if(deletionTarget.charAt(i)!=' ') {
