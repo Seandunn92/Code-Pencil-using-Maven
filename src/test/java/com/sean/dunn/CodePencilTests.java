@@ -108,5 +108,11 @@ public class CodePencilTests {
         myPencil= new CodePencil();
         assertEquals(10, myPencil.getPencilLength());
     }
+    @Test
+    public void setterForPencilLengthWorks(){
+        myPencil.setPencilLength(4);
+        assertEquals(4, myPencil.getPencilLength());
+
+    }
 
 }

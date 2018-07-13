@@ -31,6 +31,11 @@ public class CodePencil {
     public void setPointDurabilityLeft(int pointDurabilityLeft){
         this.pointDurabilityLeft = pointDurabilityLeft;
     }
+    public void setPencilLength(int pencilLength) {
+
+        this.pencilLength=pencilLength;
+
+    }
 
     public String getPaper(){
         return paper;
