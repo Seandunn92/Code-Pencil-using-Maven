@@ -170,6 +170,14 @@ public class CodePencilTests {
 
     }
 
+    @Test
+    public void DeletingWhiteSpaceDoesNotDegradeEraser(){
+        myPencil.setEraserDurability(600);
+        myPencil.setPaper("Apples and Bananas");
+        myPencil.erase(" ");
+        assertEquals(600, myPencil.getEraserDurability());
+    }
+
 
 
 
