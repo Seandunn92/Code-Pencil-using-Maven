@@ -131,4 +131,16 @@ public class CodePencil {
 
 
     }
+
+    public void edit(int startIndex, String newText) {
+        int nextNewCharIndex=0;
+
+        for (int i=startIndex; i<startIndex+newText.length(); i++){
+            if (newText.charAt(nextNewCharIndex)!=' ' && pointDurability>0) {
+                paper = paper.substring(0, i) + newText.charAt(nextNewCharIndex) + paper.substring(i + 1);
+                pointDurability--;
+            }
+            nextNewCharIndex++;
+        }
+    }
 }

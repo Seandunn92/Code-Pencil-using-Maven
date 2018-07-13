@@ -218,6 +218,16 @@ public class CodePencilTests {
 
     }
 
+    @Test
+    public void EditingWithoutCollisionWorks(){
+        myPencil.setPointDurability(100);
+        myPencil.setPaper("An " + numSpaces(5) + " a day keeps the doctor away");
+        myPencil.edit(3, "onion");
+        assertEquals("An onion a day keeps the doctor away", myPencil.getPaper());
+        assertEquals(95, myPencil.getPointDurability());
+
+    }
+
 
     public String numSpaces(int numberOfSpaces){
         String stringOfSpaces="";
