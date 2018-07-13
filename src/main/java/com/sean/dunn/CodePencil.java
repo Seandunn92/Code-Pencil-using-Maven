@@ -85,7 +85,10 @@ public class CodePencil {
         for (int i=0; i<deletionTarget.length(); i++){
             if (eraserDurability==0)
                 return deletionTarget;
-            deletionTarget = deletionTarget.substring(0, i) + ' ' + deletionTarget.substring(i+1);
+            if(deletionTarget.charAt(i)!=' ') {
+                deletionTarget = deletionTarget.substring(0, i) + ' ' + deletionTarget.substring(i + 1);
+                eraserDurability--;
+            }
         }
         return deletionTarget;
     }
@@ -126,6 +129,6 @@ public class CodePencil {
         String paperBeforeDeletion = paper.substring(0, beginningOfDeletion);
         paper = paperBeforeDeletion + performDelete(deletionTarget) + paperAfterDeletion;
 
-        eraserDurability-= deletionTarget.replaceAll(" ", "").length();
+
     }
 }
