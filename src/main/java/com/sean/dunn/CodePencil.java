@@ -6,12 +6,14 @@ public class CodePencil {
     private int pointDurability;
     private int pointDurabilityLeft;
     private int pencilLength;
+    private int eraserDurability;
 
     public CodePencil(){
         paper = "";
         pointDurability = 500;
         pointDurabilityLeft=500;
         pencilLength =10;
+        eraserDurability=100;
     }
 
     public CodePencil(int pointDurability, int pencilLength) {
@@ -50,6 +52,10 @@ public class CodePencil {
     }
     public int getPencilLength() {
         return pencilLength;
+    }
+
+    public int getEraserDurability() {
+        return eraserDurability;
     }
 
     public void write(String whatToWrite) {
@@ -95,4 +101,6 @@ public class CodePencil {
             pencilLength--;
         }
     }
+
+
 }

@@ -136,4 +136,11 @@ public class CodePencilTests {
         myPencil.sharpen();
         assertEquals(100, myPencil.getPointDurabilityLeft());
     }
+
+    @Test
+    public void EraserHasDurabilityOfOneHundredByDefault(){
+        myPencil = new CodePencil();
+        assertEquals(100, myPencil.getEraserDurability());
+
+    }
 }
