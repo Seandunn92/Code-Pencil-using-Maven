@@ -42,12 +42,12 @@ public class CodePencilTests {
     @Test
     public void PointDegredationIsSetTo500ByDefault(){
         myPencil = new CodePencil();
-        assertEquals(500, myPencil.getPointDurability());
+        assertEquals(500, myPencil.getPointDurabilityLeft());
     }
     @Test
     public void PointDurabilityCanBeSetByConstructor(){
         myPencil = new CodePencil(10);
-        assertEquals(10, myPencil.getPointDurability());
+        assertEquals(10, myPencil.getPointDurabilityLeft());
     }
 
     @Test
@@ -60,36 +60,38 @@ public class CodePencilTests {
     public void PointDegredationWorksForlowercase(){
         myPencil = new CodePencil();
         myPencil.write("apple");
-        assertEquals(495, myPencil.getPointDurability());
+        assertEquals(495, myPencil.getPointDurabilityLeft());
         myPencil.write("pear");
-        assertEquals(491, myPencil.getPointDurability());
+        assertEquals(491, myPencil.getPointDurabilityLeft());
     }
 
     @Test
     public void PointDegredationWorksForUppercase(){
         myPencil = new CodePencil();
         myPencil.write("Apple");
-        assertEquals(494, myPencil.getPointDurability());
+        assertEquals(494, myPencil.getPointDurabilityLeft());
         myPencil.write("PEAR");
-        assertEquals(486, myPencil.getPointDurability());
+        assertEquals(486, myPencil.getPointDurabilityLeft());
     }
 
     @Test
     public void PointDegredationWorksForSpaces(){
         myPencil = new CodePencil();
         myPencil.write("apple pear");
-        assertEquals(491, myPencil.getPointDurability());
+        assertEquals(491, myPencil.getPointDurabilityLeft());
         myPencil.write("   ");
-        assertEquals(491, myPencil.getPointDurability());
+        assertEquals(491, myPencil.getPointDurabilityLeft());
 
     }
     @Test
     public void PointDegredationWorksForNewLines(){
-        myPencil.setPointDurablity(10);
+        myPencil.setPointDurabilityLeft(10);
         myPencil.write("\n\n\n\n");
-        assertEquals(10, myPencil.getPointDurability());
+        assertEquals(10, myPencil.getPointDurabilityLeft());
         myPencil.write("hello \n there");
-        assertEquals(0, myPencil.getPointDurability());
+        assertEquals(0, myPencil.getPointDurabilityLeft());
     }
+
+
 
 }

@@ -4,38 +4,47 @@ public class CodePencil {
 
     private String paper;
     int pointDurability;
+    int pointDurabilityLeft;
 
     public CodePencil(){
         paper = "";
         pointDurability = 500;
+        pointDurabilityLeft=500;
     }
 
     public CodePencil(int pointDurability) {
         this.pointDurability = pointDurability;
-    }
-
-    public String getPaper(){
-        return paper;
+        this.pointDurabilityLeft = pointDurability;
     }
 
     public void setPaper(String desiredPaper) {
         paper=desiredPaper;
     }
 
-    public int getPointDurability() {
-        return pointDurability;
-    }
-
-
     public void setPointDurablity(int pointDurability) {
         this.pointDurability=pointDurability;
     }
 
+    public void setPointDurabilityLeft(int pointDurabilityLeft){
+        this.pointDurabilityLeft = pointDurabilityLeft;
+    }
+
+    public String getPaper(){
+        return paper;
+    }
+
+    public int getPointDurability() {
+        return pointDurability;
+    }
+
+    public int getPointDurabilityLeft() {
+        return pointDurabilityLeft;
+    }
 
     public void write(String whatToWrite) {
 
 
-        pointDurability -= calculatePointDegredation(whatToWrite);
+        pointDurabilityLeft -= calculatePointDegredation(whatToWrite);
         paper += whatToWrite;
     }
 
@@ -53,5 +62,6 @@ public class CodePencil {
         }
         return pointDegradation;
     }
+
 
 }
