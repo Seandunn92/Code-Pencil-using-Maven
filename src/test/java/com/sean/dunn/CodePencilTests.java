@@ -195,14 +195,14 @@ public class CodePencilTests {
         assertEquals(560, myPencil.getEraserDurability());
     }
 
-//    @Test
-//    public void ErasingStringDoesNothingIfEraserIsDegraded(){
-//        myPencil.setEraserDurability(0);
-//        myPencil.setPaper("Hunger and War");
-//        myPencil.erase("War");
-//        assertEquals("Hunger and War", myPencil.getPaper());
-//        assertEquals(0, myPencil.getEraserDurability());
-//    }
+    @Test
+    public void ErasingStringDoesNothingIfEraserIsDegraded(){
+        myPencil.setEraserDurability(0);
+        myPencil.setPaper("Hunger and War");
+        myPencil.erase("War");
+        assertEquals("Hunger and War", myPencil.getPaper());
+        assertEquals(0, myPencil.getEraserDurability());
+    }
 
 
     public String numSpaces(int numberOfSpaces){
