@@ -81,6 +81,15 @@ public class CodePencil {
         return spaceString;
     }
 
+    private String performDelete(String deletionTarget){
+        for (int i=0; i<deletionTarget.length(); i++){
+            if (eraserDurability==0)
+                return deletionTarget;
+            deletionTarget = deletionTarget.substring(0, i) + ' ' + deletionTarget.substring(i+1);
+        }
+        return deletionTarget;
+    }
+
     private int getWritingStopPoint(String whatToWrite) {
         int pointDegradation =0;
         for (int i = 0; i<whatToWrite.length(); i++)
@@ -115,7 +124,7 @@ public class CodePencil {
         int endOfDeletion = paper.lastIndexOf(deletionTarget) + deletionTarget.length();
         String paperAfterDeletion = paper.substring(endOfDeletion);
         String paperBeforeDeletion = paper.substring(0, beginningOfDeletion);
-        paper = paperBeforeDeletion + calculateStringOfSpaces(deletionTarget.length()) + paperAfterDeletion;
+        paper = paperBeforeDeletion + performDelete(deletionTarget) + paperAfterDeletion;
 
         eraserDurability-= deletionTarget.replaceAll(" ", "").length();
     }
