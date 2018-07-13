@@ -44,23 +44,25 @@ public class CodePencil {
     public void write(String whatToWrite) {
 
 
-        pointDurabilityLeft -= calculatePointDegredation(whatToWrite);
-        paper += whatToWrite;
+        int stoppingPoint = getWritingStopPoint(whatToWrite);
+        paper += whatToWrite.substring(0,stoppingPoint);
     }
 
-    private int calculatePointDegredation(String whatToWrite) {
+    private int getWritingStopPoint(String whatToWrite) {
         int pointDegradation =0;
         for (int i = 0; i<whatToWrite.length(); i++)
         {
-
             char currentChar = whatToWrite.charAt(i);
             if (currentChar != ' '  && currentChar !='\n') {
                 if (Character.toLowerCase(currentChar) == currentChar) {
-                    pointDegradation++;
-                } else pointDegradation += 2;
+                    pointDurabilityLeft--;
+                } else pointDurabilityLeft -= 2;
+            }
+            if (pointDurabilityLeft<0){
+                return i;
             }
         }
-        return pointDegradation;
+        return whatToWrite.length();
     }
 
 
