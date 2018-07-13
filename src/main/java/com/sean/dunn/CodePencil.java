@@ -39,6 +39,9 @@ public class CodePencil {
         this.pencilLength=pencilLength;
 
     }
+    public void setEraserDurability(int eraserDurability) {
+        this.eraserDurability=eraserDurability;
+    }
 
     public String getPaper(){
         return paper;
@@ -102,6 +105,7 @@ public class CodePencil {
             pencilLength--;
         }
     }
+
 
 
 }
