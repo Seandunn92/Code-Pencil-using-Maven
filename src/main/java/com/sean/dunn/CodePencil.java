@@ -21,12 +21,27 @@ public class CodePencil {
 
     public void write(String whatToWrite) {
 
-        pointDegredation -= whatToWrite.length();
+
+        pointDegredation -= calculatePointDegredation(whatToWrite);
         paper += whatToWrite;
+    }
+
+    private int calculatePointDegredation(String whatToWrite) {
+        int count =0;
+        for (int i = 0; i<whatToWrite.length(); i++)
+        {
+            char currentChar = whatToWrite.charAt(i);
+           if(Character.toLowerCase(currentChar) == currentChar){
+                count++;
+           }
+        }
+        return count;
     }
 
 
     public int getPointDegredation() {
         return pointDegredation;
     }
+
+
 }

@@ -51,4 +51,11 @@ public class CodePencilTests {
         myPencil.write("apple");
         assertEquals(495, myPencil.getPointDegredation());
     }
+
+//    @Test
+//    public void PointDegredationWorksForUppercase(){
+//        myPencil = new CodePencil();
+//        myPencil.write("Apple");
+//        assertEquals(494, myPencil.getPointDegredation());
+//    }
 }
