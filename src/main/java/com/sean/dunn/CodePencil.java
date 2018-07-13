@@ -45,7 +45,11 @@ public class CodePencil {
 
 
         int stoppingPoint = getWritingStopPoint(whatToWrite);
-        paper += whatToWrite.substring(0,stoppingPoint) + calculateStringOfSpaces(whatToWrite.length()-stoppingPoint);
+        if (stoppingPoint == whatToWrite.length())
+            paper+=whatToWrite;
+        else
+            paper += whatToWrite.substring(0,stoppingPoint) + calculateStringOfSpaces(whatToWrite.length()-stoppingPoint);
+
     }
 
     private String calculateStringOfSpaces(int numOfSpaces) {
