@@ -3,22 +3,22 @@ package com.sean.dunn;
 public class CodePencil {
 
     private String paper;
+    private int initialPointDurability;
     private int pointDurability;
-    private int pointDurabilityLeft;
     private int pencilLength;
     private int eraserDurability;
 
     public CodePencil(){
         paper = "";
-        pointDurability = 500;
-        pointDurabilityLeft=500;
+        initialPointDurability = 500;
+        pointDurability =500;
         pencilLength =10;
         eraserDurability=100;
     }
 
     public CodePencil(int pointDurability, int pencilLength) {
+        this.initialPointDurability = pointDurability;
         this.pointDurability = pointDurability;
-        this.pointDurabilityLeft = pointDurability;
         this.pencilLength=pencilLength;
     }
 
@@ -26,12 +26,12 @@ public class CodePencil {
         paper=desiredPaper;
     }
 
-    public void setPointDurablity(int pointDurability) {
-        this.pointDurability=pointDurability;
+    public void setInitialPointDurablity(int initialPointDurability) {
+        this.initialPointDurability =initialPointDurability;
     }
 
-    public void setPointDurabilityLeft(int pointDurabilityLeft){
-        this.pointDurabilityLeft = pointDurabilityLeft;
+    public void setPointDurability(int pointDurability){
+        this.pointDurability = pointDurability;
     }
     public void setPencilLength(int pencilLength) {
 
@@ -43,12 +43,12 @@ public class CodePencil {
         return paper;
     }
 
-    public int getPointDurability() {
-        return pointDurability;
+    public int getInitialPointDurability() {
+        return initialPointDurability;
     }
 
-    public int getPointDurabilityLeft() {
-        return pointDurabilityLeft;
+    public int getPointDurability() {
+        return pointDurability;
     }
     public int getPencilLength() {
         return pencilLength;
@@ -84,10 +84,10 @@ public class CodePencil {
             char currentChar = whatToWrite.charAt(i);
             if (currentChar != ' '  && currentChar !='\n') {
                 if (Character.toLowerCase(currentChar) == currentChar) {
-                    pointDurabilityLeft--;
-                } else pointDurabilityLeft -= 2;
+                    pointDurability--;
+                } else pointDurability -= 2;
             }
-            if (pointDurabilityLeft<0){
+            if (pointDurability <0){
                 return i;
             }
         }
@@ -97,7 +97,7 @@ public class CodePencil {
 
     public void sharpen() {
         if (pencilLength>0) {
-            pointDurabilityLeft = pointDurability;
+            pointDurability = initialPointDurability;
             pencilLength--;
         }
     }
