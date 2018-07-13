@@ -99,8 +99,7 @@ public class CodePencilTests {
         myPencil = new CodePencil();
         myPencil.setPointDurability(7);
         myPencil.write("apples and pears");
-        //8 spaces after apple a
-        assertEquals("apples a        "   , myPencil.getPaper());
+        assertEquals("apples a" + numSpaces(8)   , myPencil.getPaper());
     }
 
     @Test
@@ -155,7 +154,7 @@ public class CodePencilTests {
         myPencil.setEraserDurability(60);
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("Apples");
-        assertEquals("       and Bananas", myPencil.getPaper());
+        assertEquals(numSpaces(6) + " and Bananas", myPencil.getPaper());
     }
 
     @Test
@@ -163,7 +162,14 @@ public class CodePencilTests {
         myPencil = new CodePencil();
         myPencil.setPaper("Apples and Bananas");
         myPencil.erase("Bananas");
-        assertEquals("Apples and        ", myPencil.getPaper());
+        assertEquals("Apples and " + numSpaces(7), myPencil.getPaper());
     }
 
+    public String numSpaces(int numberOfSpaces){
+        String stringOfSpaces="";
+        for (int i =0; i<numberOfSpaces; i++)
+            stringOfSpaces+=' ';
+
+        return stringOfSpaces;
+    }
 }
