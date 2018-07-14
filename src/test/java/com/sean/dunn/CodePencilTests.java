@@ -49,6 +49,7 @@ public class CodePencilTests {
         assertEquals(10, myPencil.getPointDurability());
         assertEquals(7, myPencil.getPencilLength());
         assertEquals(57, myPencil.getEraserDurability());
+        assertEquals("", myPencil.getPaper());
     }
 
     @Test

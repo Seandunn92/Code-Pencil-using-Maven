@@ -21,6 +21,8 @@ public class CodePencil {
         this.pointDurability = pointDurability;
         this.pencilLength=pencilLength;
         this.eraserDurability = eraserDurability;
+        paper="";
+
     }
 
     public void setPaper(String desiredPaper) {
