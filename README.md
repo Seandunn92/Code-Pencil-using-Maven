@@ -18,38 +18,51 @@ You may also use an ide such as Intelij or Eclipse if you choose but it is not r
 
 
 ** CODE PENCIL CLASS**
-   private String paper; -- What the user will write on
-    private int initialPointDurability; -- the durability the pencil started with
-    private int pointDurability;  -- the durability the pencil has now. When durability hits 0 the pencil will no longer erase
-    private int pencilLength;   -- the length of the pencil, Once this is 0 you can no longer sharpen pencil
-    private int eraserDurability;  --the durability of the eraser. Once this hits 0 you can no longer erase
+    private String paper; 
+    -- What the user will write on -- 
+    
+    private int initialPointDurability;  
+    -- the durability the pencil started with -- 
+    
+    private int pointDurability; 
+    -- the durability the pencil has now. When durability hits 0 the pencil will no longer erase-- 
+    
+    private int pencilLength; 
+    -- the length of the pencil, Once this is 0 you can no longer sharpen pencil-- 
+    
+    private int eraserDurability; 
+    --the durability of the eraser. Once this hits 0 you can no longer erase--
 
    ** Construtors **
-    CodePencil() - starts with blank paper, 500 pointDurablity, 100 eraserDurability, and pencil Lenght 10
-    CodePencil(int pointDurability, int pencilLength, int eraserDurability) - You set everything but the blank piece paper users start with
-    (initalpointDurablility will start off equal to pointDurability)
+    CodePencil() 
+    --Default Pencil starts with blank paper, 500 pointDurablity, 100 eraserDurability, and pencil Lenght 10--
+    
+    CodePencil(int pointDurability, int pencilLength, int eraserDurability)
+    -- You set everything but the blank piece paper users start with --
+    --(initalpointDurablility will start off equal to pointDurability)--
 
     **SETTERS**
     public void setPaper(String desiredPaper);
 
     public void setInitialPointDurablity(int initialPointDurability);
 
-    public void setPointDurability(int pointDurability)
+    public void setPointDurability(int pointDurability);
 
-    public void setPencilLength(int pencilLength)
+    public void setPencilLength(int pencilLength);
 
-    public void setEraserDurability(int eraserDurability)
+    public void setEraserDurability(int eraserDurability);
 
    **GETTERS**
-    public String getPaper()
+   
+    public String getPaper();
 
-    public int getInitialPointDurability()
+    public int getInitialPointDurability();
 
-    public int getPointDurability()
+    public int getPointDurability();
 
-    public int getPencilLength()
+    public int getPencilLength();
 
-    public int getEraserDurability()
+    public int getEraserDurability();
 
 
     public void write(String whatToWrite)    -- Take in a string and adds that string to the pencil's paper
@@ -100,7 +113,7 @@ Welcome to the Code Pencil menu: Please enter in the option number you would lik
             assertEquals(7, myPencil.getPencilLength());
             assertEquals(57, myPencil.getEraserDurability());
             assertEquals("", myPencil.getPaper());
-        }
+        
 
 
     --Tests that a user can write on a blank page successfully--
@@ -108,7 +121,7 @@ Welcome to the Code Pencil menu: Please enter in the option number you would lik
 
 
     --Test to check that writing on a non blank page, appends the new text to the paper without a problem--
-    public void WritingOnNonBlankPageWorks(){
+    public void WritingOnNonBlankPageWorks()
 
 
 
