@@ -19,6 +19,7 @@ public class App
            System.out.println("**********************************************************************************");
            System.out.println("Pencil Durability: " + appPencil.getPointDurability());
            System.out.println("Eraser Durabality: " + appPencil.getEraserDurability());
+           System.out.println("Pencil Length    :"  + appPencil.getPencilLength() );
            System.out.println();
            System.out.println("Welcome to the Code Pencil menu: Please enter in the option number you would like");
            System.out.println("-1 : Quit");
