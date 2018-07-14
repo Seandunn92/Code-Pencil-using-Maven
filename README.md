@@ -86,18 +86,33 @@ You may also use an ide such as Intelij or Eclipse if you choose but it is not r
 Menu
 
 **********************************************************************************
-Pencil Durability: 500     -Display the pencil stats so the user will know when they need to sharpen,
-                            and when they can no longer erase
+Pencil Durability: 500     
 Eraser Durabality: 100
 Pencil Length    :10
 
+---Display the pencil stats so the user will know when they need to sharpen and when they can no longer erase--
+
 Welcome to the Code Pencil menu: Please enter in the option number you would like
--1 : Quit                       When the user types a number less than 1 the app will stop
-1  : Display my Paper           Type 1 to see the current paper (CodePencil.getPaper()
-2  : Write                      Type 2 to Write on the paper     (CodePencil.write(String))
-3  : Erase                      Type 3 to Erase from the paper  (CodePencil.erase(String))
-4  : Edit                       Type 4 to Edit the paper  (CodePencil.edit(String))
-5  : Sharpen                    Type 5 to Sharpen Pencil (CodePencil.sharpen())
+
+
+-1 : Quit                       
+--When the user types a number less than 1 the app will stop--
+
+1  : Display my Paper           
+--Type 1 to see the current paper (CodePencil.getPaper()) --
+
+2  : Write                      
+--Type 2 to Write on the paper     (CodePencil.write(String))
+
+3  : Erase                    
+--Type 3 to Erase from the paper  (CodePencil.erase(String))--
+
+4  : Edit                     
+--Type 4 to Edit the paper  (CodePencil.edit(String))--
+
+5  : Sharpen                    
+--Type 5 to Sharpen Pencil (CodePencil.sharpen())--
+
 **********************************************************************************
 
 
