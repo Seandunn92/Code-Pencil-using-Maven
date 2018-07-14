@@ -59,7 +59,7 @@ public class CodePencilTests {
     }
 
     @Test
-    public void PointDegredationWorksForlowercase(){
+    public void PointDegredationWorksForLowercase(){
         myPencil = new CodePencil();
         myPencil.write("apple");
         assertEquals(495, myPencil.getPointDurability());
@@ -115,7 +115,7 @@ public class CodePencilTests {
 
     }
     @Test
-    public void SharpenRestoresDurabilityLeft(){
+    public void SharpenRestoresDurability(){
         myPencil = new CodePencil(400, 5, 50);
         myPencil.setPointDurability(50);
         myPencil.sharpen();
