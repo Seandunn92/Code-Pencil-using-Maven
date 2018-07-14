@@ -17,6 +17,9 @@ public class App
        do {
            System.out.println();
            System.out.println("**********************************************************************************");
+           System.out.println("Pencil Durability: " + appPencil.getPointDurability());
+           System.out.println("Eraser Durabality: " + appPencil.getEraserDurability());
+           System.out.println();
            System.out.println("Welcome to the Code Pencil menu: Please enter in the option number you would like");
            System.out.println("-1 : Quit");
            System.out.println("1  : Display my Paper");
@@ -39,4 +42,5 @@ public class App
         System.out.print(appPencil.getPaper());
         appPencil.write(scanner.nextLine());
     }
+
 }
