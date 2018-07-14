@@ -248,6 +248,13 @@ public class CodePencilTests {
         assertEquals("An onion a day keeps the doctor away", myPencil.getPaper());
 
     }
+    @Test
+    public void DefaultEdittingDoesNotEditIfThereAreNotTwoSpacesInPaper(){
+        myPencil.setPointDurability(50);
+        myPencil.setPaper("An ordinary article without 2 spaces");
+        myPencil.edit("straight");
+        assertEquals("An ordinary article without 2 spaces", myPencil.getPaper());
+    }
 
 
     public String numSpaces(int numberOfSpaces){
