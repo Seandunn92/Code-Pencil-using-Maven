@@ -23,6 +23,7 @@ public class App
            System.out.println("2  : Write");
            System.out.println("**********************************************************************************");
            input = scanner.nextInt();
+           System.out.println();
            switch(input){
                case 1: DisplayPaper();break;
                case 2: Write(); break;
@@ -35,6 +36,7 @@ public class App
     }
     private static void Write() {
         scanner.nextLine();
+        System.out.print(appPencil.getPaper());
         appPencil.write(scanner.nextLine());
     }
 }
