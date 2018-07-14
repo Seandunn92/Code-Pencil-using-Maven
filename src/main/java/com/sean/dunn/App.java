@@ -24,12 +24,14 @@ public class App
            System.out.println("-1 : Quit");
            System.out.println("1  : Display my Paper");
            System.out.println("2  : Write");
+           System.out.println("3  : Erase");
            System.out.println("**********************************************************************************");
            input = scanner.nextInt();
            System.out.println();
            switch(input){
                case 1: DisplayPaper();break;
                case 2: Write(); break;
+               case 3: Erase(); break;
            }
        }while (input>-1);
     }
@@ -42,5 +44,11 @@ public class App
         System.out.print(appPencil.getPaper());
         appPencil.write(scanner.nextLine());
     }
+    private static void Erase() {
+        System.out.println("What would you like to erase?");
+        scanner.nextLine();
+        appPencil.erase(scanner.nextLine());
+    }
+
 
 }
