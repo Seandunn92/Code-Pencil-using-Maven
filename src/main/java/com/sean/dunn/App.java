@@ -26,6 +26,7 @@ public class App
            System.out.println("1  : Display my Paper");
            System.out.println("2  : Write");
            System.out.println("3  : Erase");
+           System.out.println("4  : Edit");
            System.out.println("**********************************************************************************");
            input = scanner.nextInt();
            System.out.println();
@@ -33,6 +34,7 @@ public class App
                case 1: DisplayPaper();break;
                case 2: Write(); break;
                case 3: Erase(); break;
+               case 4: Edit(); break;
            }
        }while (input>-1);
     }
@@ -49,6 +51,19 @@ public class App
         System.out.println("What would you like to erase?");
         scanner.nextLine();
         appPencil.erase(scanner.nextLine());
+    }
+    private static void Edit() {
+        System.out.println("What would you like to insert into you paper?");
+        scanner.nextLine();
+        String whatToInsert = scanner.nextLine();
+        System.out.println("What index do you want to start at: (-1 to default to the first instance of 2 spaces in " +
+                          "your paper)");
+        int editIndex=scanner.nextInt();
+
+        if(editIndex<=-1)
+            appPencil.edit(whatToInsert);
+        else
+            appPencil.edit(editIndex, whatToInsert);
     }
 
 
