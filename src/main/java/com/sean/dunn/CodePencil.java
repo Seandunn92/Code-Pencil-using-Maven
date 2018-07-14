@@ -153,4 +153,11 @@ public class CodePencil {
             nextNewCharIndex++;
         }
     }
+
+    public void edit(String newText) {
+        int startIndex= paper.indexOf("  ")+1;
+        if (startIndex!=-1)
+        edit(startIndex, newText);
+
+    }
 }

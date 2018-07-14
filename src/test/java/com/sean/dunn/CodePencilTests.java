@@ -239,6 +239,15 @@ public class CodePencilTests {
 
     }
 
+    @Test
+    public void EdittingDefaultsToLastPlaceWithTwoSpaces(){
+        myPencil.setPointDurability(50);
+        myPencil.setPaper("An "+ numSpaces(5) + " a day keeps the doctor away");
+        myPencil.edit("onion");
+        assertEquals("An onion a day keeps the doctor away", myPencil.getPaper());
+
+    }
+
 
     public String numSpaces(int numberOfSpaces){
         String stringOfSpaces="";
