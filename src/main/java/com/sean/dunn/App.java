@@ -27,6 +27,7 @@ public class App
            System.out.println("2  : Write");
            System.out.println("3  : Erase");
            System.out.println("4  : Edit");
+           System.out.println("5  : Sharpen");
            System.out.println("**********************************************************************************");
            input = scanner.nextInt();
            System.out.println();
@@ -35,6 +36,7 @@ public class App
                case 2: Write(); break;
                case 3: Erase(); break;
                case 4: Edit(); break;
+               case 5: appPencil.sharpen(); break;
            }
        }while (input>-1);
     }
@@ -65,6 +67,8 @@ public class App
         else
             appPencil.edit(editIndex, whatToInsert);
     }
+
+
 
 
 }
