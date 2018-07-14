@@ -18,6 +18,7 @@ You may also use an ide such as Intelij or Eclipse if you choose but it is not r
 
 
 ** CODE PENCIL CLASS**
+
     private String paper; 
     -- What the user will write on -- 
     
@@ -34,6 +35,7 @@ You may also use an ide such as Intelij or Eclipse if you choose but it is not r
     --the durability of the eraser. Once this hits 0 you can no longer erase--
 
    ** Construtors **
+   
     CodePencil() 
     --Default Pencil starts with blank paper, 500 pointDurablity, 100 eraserDurability, and pencil Lenght 10--
     
@@ -42,6 +44,7 @@ You may also use an ide such as Intelij or Eclipse if you choose but it is not r
     --(initalpointDurablility will start off equal to pointDurability)--
 
     **SETTERS**
+    
     public void setPaper(String desiredPaper);
 
     public void setInitialPointDurablity(int initialPointDurability);
@@ -119,16 +122,12 @@ Welcome to the Code Pencil menu: Please enter in the option number you would lik
 
 
 **TESTS**
+
 --When a pencil is created, It starts with a blank piece of paper.--
     public void NewCodePencilHasBlankPaper()
+    
 --When a pencil is created using overRide Values those values are honored--
-     public void NonDefaultConstructorWorks(){
-            myPencil = new CodePencil(10,7, 57);
-            assertEquals(10, myPencil.getPointDurability());
-            assertEquals(7, myPencil.getPencilLength());
-            assertEquals(57, myPencil.getEraserDurability());
-            assertEquals("", myPencil.getPaper());
-        
+  public void NonDefaultConstructorWorks()
 
 
     --Tests that a user can write on a blank page successfully--
@@ -137,9 +136,6 @@ Welcome to the Code Pencil menu: Please enter in the option number you would lik
 
     --Test to check that writing on a non blank page, appends the new text to the paper without a problem--
     public void WritingOnNonBlankPageWorks()
-
-
-
 
     --tests that lower Case Letters degrade the pencil by 1 each time--
     public void PointDegredationWorksForlowercase()
@@ -165,9 +161,6 @@ Welcome to the Code Pencil menu: Please enter in the option number you would lik
     --The User can not sharpen a pencil when the length is 0 and must buy a new one--
     public void SharpenWillNotSharpenIfPencilLengthIsZero()
 
-
-
-
    -- Tests that erasing text, replaces the text with blank spaces, and wears down the eraser.--
     public void ErasingWorks()
 
@@ -183,16 +176,16 @@ Welcome to the Code Pencil menu: Please enter in the option number you would lik
     --If the eraser is degraded the pencil can not erase --
     public void ErasingStringDoesNothingIfEraserIsDegraded()
 
-    --If the eraser degrades to in the middle of erasing, erasing will stop
+    --If the eraser degrades to in the middle of erasing, erasing will stop--
     public void DegredationinMiddleofErasingStopsDeletion()
+    
+   --Word is inserted successfully without collisions--    
+   public void EditingWithoutCollisionWorks()
+    
+  --Colission, insertion created conflicts--
+  public void EditingWithCollisionWorks()
 
-
-   --Word is inserted successfully without collisions
-    public void EditingWithoutCollisionWorks()
-  --Colission, insertion created conflicts
-    public void EditingWithCollisionWorks()
-
-    --The first place with 2 spaces is the first place an insertion can happen. (One space is to pad in front of the word)
+    --The first place with 2 spaces is the first place an insertion can happen. (One space is to pad in front of the word)--
     public void EdittingDefaultsToFirsttPlaceWithTwoSpaces()
 
 
